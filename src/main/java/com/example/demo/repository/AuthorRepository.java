@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.bean.Author;
 
 @Repository
-public interface  AuthorRepository extends JpaRepository<Author, Integer>{
+public interface  AuthorRepository extends JpaRepository<Author, Integer> {
 
 }
