@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-//import javax.validation.constraints.Size;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="AUTHOR")
@@ -15,7 +15,7 @@ public class Author {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	//@Size(min =2, max = 20 ,message ="size must be between 2 and 20")
+	@Size(min =2, max = 20, message="size must be between 2 and 20")
 	private String name;
 	private String book_name;
 	
