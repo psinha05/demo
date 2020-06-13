@@ -30,10 +30,8 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(
 			MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
 
-		ExceptionResponse exResponse = new ExceptionResponse(new Date(), "Validation Failed", ex.getBindingResult().toString());
-		
-		//return handleExceptionInternal(ex, null, headers, status, request);
-	   return new ResponseEntity<Object>(exResponse, HttpStatus.BAD_REQUEST);
+		ExceptionResponse exResponse = new ExceptionResponse(new Date(), "Validation Failed", ex.getBindingResult().toString());		
+		   return new ResponseEntity<Object>(exResponse, HttpStatus.BAD_REQUEST);
 	}
 	
 	
