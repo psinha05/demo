@@ -19,8 +19,7 @@ public class AuthorService {
 	@Autowired
 	AuthorRepository authRepository;
 	
-	// get all data
-	
+		
 	@Transactional
 	public List<Author> getAllAuthors() {
 		return (List<Author>) authRepository.findAll();
@@ -46,18 +45,7 @@ public class AuthorService {
 		return authRepository.save(author);
 	}
 		
-	/*
-	 * public Author createorUpdateAuthor(Author author) throws
-	 * RecordsNotFoundException { Optional<Author> auth =
-	 * authRepository.findById(author.getId());
-	 * 
-	 * if(auth.isPresent()) { Author ath =auth.get(); ath.setId(author.getId());
-	 * ath.setName(author.getName()); ath.setBook_name(author.getBook_name());
-	 * //ath.setId(author.getId()); ath = authRepository.save(ath);
-	 * 
-	 * return ath; } else { author = authRepository.save(author); return author; } }
-	 */
-		
+	
 		
 	public void deleteAuthor(Integer id) {
 		 authRepository.deleteById(id);
